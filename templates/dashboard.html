@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Dashboard</h1>
+    {% if description %}
+        <h1>Welcome, {{ description }}!</h1>
+    {% endif %}
+    <br>
+    {% if current_user.isadmin == 1 %}
+        Current user has admin rights
+    {% endif %}
+    <br><br>
+    <a href="{{ data.logout_url }}">Logout</a>
+</body>
+</html>
